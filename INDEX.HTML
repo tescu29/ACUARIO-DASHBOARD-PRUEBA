@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>ANIPRO – Acuario Inteligente</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root {
+      --primary: #4cb9a6;
+      --primary-dark: #3a8f81;
+      --accent: #7fd7c5;
+      --surface: #0c1a1a;
+      --surface-soft: #152525;
+      --surface-hover: #1f3333;
+      --text-main: #e7f8f4;
+      --text-muted: #a5c7bf;
+      --border: #1f3a39;
+      --ok: #6ee7b7;
+      --warn: #facc15;
+      --crit: #ef4444;
+      --radius: 14px;
+      --shadow: 0 18px 38px rgba(0, 0, 0, 0.5);
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top, #0b1919, #041010 45%, #000);
+      color: var(--text-main);
+      overflow-x: hidden;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(10, 20, 20, 0.8);
+      backdrop-filter: blur(12px);
+      padding: 8px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-logo {
+      width: 32px;
+      height: 32px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #04201c;
+      font-weight: bold;
+      box-shadow: 0 0 12px rgba(76,185,166,0.6);
+    }
+
+    .btn-sidebar {
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--primary);
+      background: transparent;
+      color: var(--primary);
+      cursor: pointer;
+      font-size: 0.86rem;
+    }
+
+    .btn-sidebar:hover {
+      background: var(--surface-hover);
+    }
+
+    /* SIDEBAR */
+    #sidebar {
+      position: fixed;
+      left: -310px;
+      top: 0;
+      width: 300px;
+      height: 100%;
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      padding: 18px;
+      transition: 0.3s ease;
+      z-index: 100;
+      box-shadow: var(--shadow);
+    }
+
+    #sidebar.open {
+      left: 0;
+    }
+
+    .sidebar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .sidebar-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .close-sidebar {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+
+    label {
+      font-size: 0.8rem;
+      margin-top: 8px;
+      display: block;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface-soft);
+      color: var(--text-main);
+      margin-top: 4px;
+      font-size: 0.85rem;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      margin-top: 8px;
+    }
+
+    .btn-save {
+      margin-top: 14px;
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      background: var(--primary);
+      color: #04201c;
+      font-weight: bold;
+      transition: 0.2s;
+      font-size: 0.9rem;
+    }
+
+    .btn-save:hover {
+      background: var(--primary-dark);
+    }
+
+    main {
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 2fr 1.2fr;
+      gap: 20px;
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: var(--surface-soft);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 16px;
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .status-pill {
+      background: rgba(110,231,183,0.15);
+      padding: 4px 10px;
+      border-radius: 999px;
+      color: var(--ok);
+      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .sensor-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    @media (max-width: 700px) {
+      .sensor-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .sensor-card {
+      background: var(--surface);
+      padding: 10px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .sensor-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .sensor-value {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .tds-chart {
+      margin-top: 10px;
+      padding: 12px;
+      border-radius: 12px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+    }
+
+    .tds-chart svg {
+      width: 100%;
+      height: 90px;
+    }
+
+    /* BIO SUMMARY */
+    #bioBioloadLine {
+      font-size: 0.8rem;
+      margin-bottom: 4px;
+    }
+
+    #bioGlobalSummary {
+      font-size: 0.82rem;
+      margin-bottom: 4px;
+    }
+
+    #bioGlobalDetail {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .section-label {
+      font-weight: 600;
+      margin-top: 8px;
+      margin-bottom: 4px;
+      font-size: 0.9rem;
+    }
+
+    .bio-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.82rem;
+    }
+
+    .bio-item:last-child {
+      border-bottom: none;
+    }
+
+    .bio-main {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .bio-name {
+      font-weight: 500;
+    }
+
+    .bio-meta {
+      font-size: 0.74rem;
+      color: var(--text-muted);
+    }
+
+    .bio-tag {
+      font-size: 0.7rem;
+      padding: 2px 6px;
+      border-radius: 999px;
+      white-space: nowrap;
+      border: 1px solid transparent;
+    }
+
+    .bio-tag-ok {
+      background: rgba(110,231,183,0.15);
+      color: var(--ok);
+      border-color: rgba(110,231,183,0.6);
+    }
+
+    .bio-tag-warn {
+      background: rgba(250,204,21,0.12);
+      color: var(--warn);
+      border-color: rgba(250,204,21,0.6);
+    }
+
+    .bio-tag-crit {
+      background: rgba(248,113,113,0.12);
+      color: var(--crit);
+      border-color: rgba(248,113,113,0.6);
+    }
+
+    .bio-tag-unknown {
+      background: rgba(148,163,184,0.12);
+      color: var(--text-muted);
+      border-color: rgba(148,163,184,0.5);
+    }
+
+    .actions-cell {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .icon-btn {
+      cursor: pointer;
+      font-size: 0.9rem;
+      padding: 2px 4px;
+      border-radius: 6px;
+    }
+
+    .icon-edit {
+      color: var(--accent);
+    }
+
+    .icon-delete {
+      color: var(--crit);
+    }
+
+    /* CHAT */
+    .chat-box {
+      display: flex;
+      flex-direction: column;
+      height: 420px;
+    }
+
+    .chat-history {
+      flex: 1;
+      overflow-y: auto;
+      padding-right: 6px;
+    }
+
+    .msg {
+      margin-bottom: 10px;
+      max-width: 90%;
+      font-size: 0.82rem;
+    }
+
+    .msg.user {
+      text-align: right;
+      margin-left: auto;
+    }
+
+    .msg-bubble {
+      padding: 8px 12px;
+      border-radius: 12px;
+      background: var(--surface-hover);
+      display: inline-block;
+    }
+
+    .msg.user .msg-bubble {
+      background: var(--primary);
+      color: #04201c;
+    }
+
+    .chat-input {
+      display: flex;
+      margin-top: 10px;
+      gap: 10px;
+    }
+
+    .chat-input input {
+      flex: 1;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-main);
+    }
+
+    .chat-input button {
+      padding: 10px 16px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      background: var(--primary);
+      color: #04201c;
+      font-weight: bold;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+    }
+
+    .modal {
+      background: var(--surface);
+      padding: 20px;
+      border-radius: 16px;
+      width: 90%;
+      max-width: 420px;
+      border: 1px solid var(--border);
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="brand">
+    <div class="brand-logo">🐠</div>
+    <div>ANIPRO</div>
+  </div>
+  <button id="openSidebar" class="btn-sidebar">Perfil</button>
+</header>
+
+<!-- SIDEBAR PERFIL -->
+<div id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-title">Perfil del acuario</div>
+    <button class="close-sidebar" id="closeSidebar">✕</button>
+  </div>
+
+  <label>Nombre del acuario</label>
+  <input id="aqName" type="text" placeholder="Ej: Gambario 80L" />
+
+  <label>Tipo de acuario</label>
+  <select id="aqType">
+    <option value="">Selecciona…</option>
+    <option>Plantado</option>
+    <option>Comunitario</option>
+    <option>Gambario</option>
+    <option>Cría</option>
+  </select>
+
+  <label>Volumen aproximado (L)</label>
+  <input id="aqVolume" type="range" min="20" max="500" step="5" value="80" />
+  <div id="aqVolumeLabel">80 L</div>
+
+  <label>Nivel de experiencia</label>
+  <select id="aqExp">
+    <option>Principiante</option>
+    <option>Intermedio</option>
+    <option>Avanzado</option>
+  </select>
+
+  <button id="saveProfile" class="btn-save">Guardar cambios</button>
+</div>
+
+<main>
+  <div class="grid">
+    <!-- COLUMNA IZQUIERDA -->
+    <div>
+      <div class="card">
+        <div class="card-title">
+          Estado general – <span id="dashName">Acuario sin nombre</span>
+        </div>
+        <div style="font-size: 0.82rem; color: var(--text-muted);">
+          Volumen: <span id="dashVolume">80 L</span> · Tipo: <span id="dashType">—</span>
+        </div>
+        <br>
+        <span class="status-pill" id="statusPill">Cargando catálogo biológico…</span>
+
+        <div class="sensor-grid">
+          <div class="sensor-card">
+            <div class="sensor-label">🌡 Temperatura</div>
+            <div class="sensor-value" id="paramTemp">24.7 ºC</div>
+          </div>
+          <div class="sensor-card">
+            <div class="sensor-label">pH</div>
+            <div class="sensor-value" id="paramPh">6.9</div>
+          </div>
+          <div class="sensor-card">
+            <div class="sensor-label">TDS</div>
+            <div class="sensor-value" id="paramTds">210 µS</div>
+          </div>
+          <div class="sensor-card">
+            <div class="sensor-label">Nivel</div>
+            <div class="sensor-value">OK</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Tendencia TDS – Últimos 7 días</div>
+        <div class="tds-chart">
+          <svg viewBox="0 0 260 90" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="tdsArea" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" stop-color="rgba(76,185,166,0.55)" />
+                <stop offset="100%" stop-color="rgba(15,32,32,0.05)" />
+              </linearGradient>
+            </defs>
+            <path d="M0 70 L35 65 L75 60 L115 55 L155 50 L195 47 L235 44 L260 42 L260 90 L0 90 Z"
+              fill="url(#tdsArea)"></path>
+            <polyline points="0,70 35,65 75,60 115,55 155,50 195,47 235,44 260,42"
+              stroke="#7fd7c5" stroke-width="2.5" fill="none" stroke-linecap="round"></polyline>
+            <circle cx="260" cy="42" r="5" fill="#facc15" stroke="#fff" stroke-width="1.5"></circle>
+          </svg>
+          <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 4px;">
+            TDS sube de 190 → 210 µS · Evaporación progresiva, estable.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COLUMNA DERECHA -->
+    <div>
+      <div class="card">
+        <div class="card-title">Resumen biológico</div>
+
+        <div id="bioBioloadLine"></div>
+        <div id="bioGlobalSummary">Bienestar global: —</div>
+        <div id="bioGlobalDetail">Añade fauna para evaluar la salud del acuario.</div>
+
+        <div style="font-size: 0.82rem; margin-bottom: 6px;">
+          Condiciones actuales: <span id="bioParams">24.7 ºC · pH 6.9 · TDS 210 µS</span>
+        </div>
+
+        <div class="section-label">Fauna</div>
+        <div id="faunaList"></div>
+        <button id="addFaunaBtn" class="btn-save" style="margin-top: 10px;">Añadir fauna</button>
+
+        <div class="section-label">Flora</div>
+        <div id="floraList"></div>
+        <button id="addFloraBtn" class="btn-save" style="margin-top: 10px;">Añadir vegetación</button>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Asistente IA</div>
+        <div class="chat-box">
+          <div id="chatHistory" class="chat-history"></div>
+          <div class="chat-input">
+            <input id="chatInput" type="text" placeholder="Pregunta algo sobre tu acuario…" />
+            <button id="chatSend">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- MODAL FAUNA -->
+<div id="modalFauna" class="modal-overlay">
+  <div class="modal">
+    <h3>Añadir fauna</h3>
+    <label>Especie (nombre común o científico)</label>
+    <input id="faunaName" type="text" placeholder="Ej: rasbora, corydora, neocaridina, guppy..." />
+
+    <label>Cantidad aproximada</label>
+    <input id="faunaCount" type="number" placeholder="Ej: 20" />
+
+    <button id="saveFauna" class="btn-save">Guardar</button>
+  </div>
+</div>
+
+<!-- MODAL FLORA -->
+<div id="modalFlora" class="modal-overlay">
+  <div class="modal">
+    <h3>Añadir vegetación</h3>
+    <label>Planta (nombre común)</label>
+    <input id="floraName" type="text" placeholder="Ej: monte carlo, anubia, cola de zorro..." />
+
+    <button id="saveFlora" class="btn-save">Guardar</button>
+  </div>
+</div>
+
+<script>
+  // ============================
+  // SIDEBAR PERFIL
+  // ============================
+  const sidebar = document.getElementById("sidebar");
+  document.getElementById("openSidebar").onclick = () => sidebar.classList.add("open");
+  document.getElementById("closeSidebar").onclick = () => sidebar.classList.remove("open");
+
+  const aqName = document.getElementById("aqName");
+  const aqType = document.getElementById("aqType");
+  const aqVolume = document.getElementById("aqVolume");
+  const aqVolumeLabel = document.getElementById("aqVolumeLabel");
+
+  aqVolume.oninput = () => {
+    aqVolumeLabel.textContent = aqVolume.value + " L";
+  };
+
+  document.getElementById("saveProfile").onclick = () => {
+    document.getElementById("dashName").textContent = aqName.value || "Acuario sin nombre";
+    document.getElementById("dashType").textContent = aqType.value || "—";
+    document.getElementById("dashVolume").textContent = aqVolume.value + " L";
+    recomputeBioHealth();
+    sidebar.classList.remove("open");
+  };
+
+  // ============================
+  // PARÁMETROS "EN VIVO" (simulados)
+  // ============================
+  const currentParams = {
+    temp: 24.7,
+    ph: 6.9,
+    tds: 210
+  };
+
+  // ============================
+  // CATÁLOGOS DESDE CSV
+  // ============================
+  let faunaCatalog = {};
+  let floraCatalog = {};
+  let faunaAliases = {};
+  let floraAliases = {};
+  let catalogsReady = false;
+
+  const statusPill = document.getElementById("statusPill");
+
+  function parseCSV(text) {
+    const lines = text.split(/\r?\n/).filter(l => l.trim().length > 0);
+    if (lines.length === 0) return [];
+    const header = lines.shift().split(";");
+    return lines.map(line => {
+      const cols = line.split(";");
+      const obj = {};
+      header.forEach((h, i) => {
+        obj[h] = cols[i] !== undefined ? cols[i] : "";
+      });
+      return obj;
+    });
+  }
+
+  async function loadFaunaCatalog() {
+    try {
+      const res = await fetch("fauna.csv");
+      const txt = await res.text();
+      const rows = parseCSV(txt);
+
+      rows.forEach(row => {
+        const id = row.id;
+        if (!id) return;
+
+        faunaCatalog[id] = {
+          nombre: row.nombre_cientifico || row.nombre_comun || id,
+          comun: row.nombre_comun || row.nombre_cientifico || id,
+          grupo: row.grupo || "",
+          temp_min: row.temp_min ? parseFloat(row.temp_min) : null,
+          temp_max: row.temp_max ? parseFloat(row.temp_max) : null,
+          ph_min: row.ph_min ? parseFloat(row.ph_min) : null,
+          ph_max: row.ph_max ? parseFloat(row.ph_max) : null,
+          tds_min: row.tds_min ? parseFloat(row.tds_min) : null,
+          tds_max: row.tds_max ? parseFloat(row.tds_max) : null,
+          sensibilidad: row.sensibilidad || "",
+          bioload: row.bioload ? parseFloat(row.bioload) : 0.3
+        };
+
+        if (row.aliases) {
+          row.aliases.split("|").forEach(alias => {
+            const k = alias.trim().toLowerCase();
+            if (!k) return;
+            faunaAliases[k] = id;
+          });
+        }
+      });
+    } catch (e) {
+      console.error("Error cargando fauna.csv", e);
+    }
+  }
+
+  async function loadFloraCatalog() {
+    try {
+      const res = await fetch("flora.csv");
+      const txt = await res.text();
+      const rows = parseCSV(txt);
+
+      rows.forEach(row => {
+        const id = row.id;
+        if (!id) return;
+
+        floraCatalog[id] = {
+          nombre: row.nombre_cientifico || row.nombre_comun || id,
+          comun: row.nombre_comun || row.nombre_cientifico || id,
+          tipo: row.tipo || "",
+          luz: row.luz || "",
+          co2: row.co2 || ""
+        };
+
+        if (row.aliases) {
+          row.aliases.split("|").forEach(alias => {
+            const k = alias.trim().toLowerCase();
+            if (!k) return;
+            floraAliases[k] = id;
+          });
+        }
+      });
+    } catch (e) {
+      console.error("Error cargando flora.csv", e);
+    }
+  }
+
+  // Distancia de Levenshtein para fuzzy matching
+  function levenshtein(a, b) {
+    a = a.toLowerCase();
+    b = b.toLowerCase();
+    const matrix = [];
+    const alen = a.length;
+    const blen = b.length;
+
+    for (let i = 0; i <= blen; i++) {
+      matrix[i] = [i];
+    }
+    for (let j = 0; j <= alen; j++) {
+      matrix[0][j] = j;
+    }
+
+    for (let i = 1; i <= blen; i++) {
+      for (let j = 1; j <= alen; j++) {
+        if (b.charAt(i - 1) === a.charAt(j - 1)) {
+          matrix[i][j] = matrix[i - 1][j - 1];
+        } else {
+          matrix[i][j] = Math.min(
+            matrix[i - 1][j - 1] + 1,
+            matrix[i][j - 1] + 1,
+            matrix[i - 1][j] + 1
+          );
+        }
+      }
+    }
+    return matrix[blen][alen];
+  }
+
+  function normalizeFaunaName(input) {
+    if (!input) return null;
+    const key = input.trim().toLowerCase();
+    return faunaAliases[key] || null;
+  }
+
+  function getClosestFaunaAliasKey(input) {
+    const clean = input.trim().toLowerCase();
+    if (!clean) return null;
+
+    let bestKey = null;
+    let bestDist = Infinity;
+    const keys = Object.keys(faunaAliases);
+
+    keys.forEach(key => {
+      const dist = levenshtein(clean, key.toLowerCase());
+      if (dist < bestDist) {
+        bestDist = dist;
+        bestKey = key;
+      }
+    });
+
+    if (bestDist <= 3) return bestKey;
+    return null;
+  }
+
+  // Carga inicial de catálogos
+  Promise.all([loadFaunaCatalog(), loadFloraCatalog()]).then(() => {
+    catalogsReady = true;
+    statusPill.textContent = "Catálogo cargado · Listo para evaluar";
+    recomputeBioHealth();
+  }).catch(() => {
+    statusPill.textContent = "Error cargando catálogo";
+  });
+
+  // ============================
+  // ESTADO BIOLÓGICO
+  // ============================
+  const faunaData = [];
+  const floraData = [];
+
+  const faunaList = document.getElementById("faunaList");
+  const floraList = document.getElementById("floraList");
+  const bioGlobalSummary = document.getElementById("bioGlobalSummary");
+  const bioGlobalDetail = document.getElementById("bioGlobalDetail");
+  const bioBioloadLine = document.getElementById("bioBioloadLine");
+
+  function paramPenalty(value, min, max) {
+    if (min == null || max == null) return 0;
+    if (value >= min && value <= max) return 0;
+    const dist = value < min ? min - value : value - max;
+    if (dist <= 0.3) return 10;
+    if (dist <= 1) return 25;
+    return 50;
+  }
+
+  function evalSpecies(entry) {
+    const def = entry.catalogDef;
+    if (!def) {
+      return { score: 70, label: "Sin datos", className: "bio-tag-unknown" };
+    }
+    let score = 100;
+    score -= paramPenalty(currentParams.temp, def.temp_min, def.temp_max);
+    score -= paramPenalty(currentParams.ph, def.ph_min, def.ph_max);
+    score -= paramPenalty(currentParams.tds, def.tds_min, def.tds_max);
+
+    let label, className;
+    if (score >= 80) {
+      label = "Óptimo";
+      className = "bio-tag-ok";
+    } else if (score >= 60) {
+      label = "En límite";
+      className = "bio-tag-warn";
+    } else {
+      label = "Fuera de rango";
+      className = "bio-tag-crit";
+    }
+    return { score, label, className };
+  }
+
+  function getBioloadLabel(usagePercent) {
+    if (usagePercent < 60) {
+      return { label: "Baja", className: "bio-tag-ok" };
+    }
+    if (usagePercent < 100) {
+      return { label: "Adecuada", className: "bio-tag-ok" };
+    }
+    if (usagePercent < 130) {
+      return { label: "Alta", className: "bio-tag-warn" };
+    }
+    return { label: "Crítica", className: "bio-tag-crit" };
+  }
+
+  function recomputeBioHealth() {
+    if (!catalogsReady) {
+      bioGlobalSummary.textContent = "Bienestar global: — (cargando catálogo…)";
+      bioGlobalDetail.textContent = "Espera a que se carguen fauna.csv y flora.csv.";
+      bioBioloadLine.textContent = "";
+      return;
+    }
+
+    if (faunaData.length === 0) {
+      bioGlobalSummary.textContent = "Bienestar global: —";
+      bioGlobalDetail.textContent = "Añade fauna para evaluar la salud del acuario.";
+      bioBioloadLine.textContent = "";
+      faunaList.innerHTML = "";
+      return;
+    }
+
+    let totalScore = 0;
+    let countScore = 0;
+    let worst = null;
+
+    faunaData.forEach(entry => {
+      const result = evalSpecies(entry);
+      entry.lastEval = result;
+      totalScore += result.score;
+      countScore += 1;
+      if (!worst || result.score < worst.lastEval.score) {
+        worst = entry;
+      }
+    });
+
+    const avg = Math.round(totalScore / countScore);
+    let label;
+    if (avg >= 85) label = "Excelente";
+    else if (avg >= 70) label = "Bueno";
+    else if (avg >= 55) label = "Inestable";
+    else label = "Crítico";
+
+    bioGlobalSummary.textContent = `Bienestar global: ${avg}/100 (${label})`;
+
+    if (worst && worst.catalogDef) {
+      bioGlobalDetail.textContent =
+        `Especie más sensible ahora mismo: ${worst.catalogDef.comun} (${worst.catalogDef.nombre}). Estado: ${worst.lastEval.label}.`;
+    } else if (worst) {
+      bioGlobalDetail.textContent =
+        `No hay datos completos de catálogo para todas las especies. Revisa nombres para mayor precisión.`;
+    }
+
+    // CARGA BIOLÓGICA usando litros
+    const volume = parseInt(aqVolume.value || "80", 10);
+    let totalBioload = 0;
+
+    faunaData.forEach(entry => {
+      if (entry.catalogDef && entry.count && entry.catalogDef.bioload != null) {
+        totalBioload += entry.catalogDef.bioload * entry.count;
+      }
+    });
+
+    const capacityUnits = (volume / 50) * 10;
+    const usagePercent = capacityUnits > 0 ? (totalBioload / capacityUnits) * 100 : 0;
+
+    const bioloadInfo = getBioloadLabel(usagePercent);
+
+    bioBioloadLine.innerHTML =
+      `Carga biológica estimada: ` +
+      `<span class="bio-tag ${bioloadInfo.className}">${bioloadInfo.label}</span> ` +
+      `(${usagePercent.toFixed(0)}% de capacidad en ${volume} L)`;
+
+    renderFaunaList();
+  }
+
+  function renderFaunaList() {
+    faunaList.innerHTML = "";
+    faunaData.forEach((entry, index) => {
+      const row = document.createElement("div");
+      row.className = "bio-item";
+
+      const main = document.createElement("div");
+      main.className = "bio-main";
+
+      const name = document.createElement("div");
+      name.className = "bio-name";
+      name.textContent = entry.displayName;
+      const meta = document.createElement("div");
+      meta.className = "bio-meta";
+      const countTxt = entry.count ? `${entry.count} uds` : "Cantidad no indicada";
+      const extra = entry.catalogDef && entry.catalogDef.grupo
+        ? ` · ${entry.catalogDef.grupo}`
+        : "";
+      meta.textContent = countTxt + extra;
+
+      main.appendChild(name);
+      main.appendChild(meta);
+
+      const tag = document.createElement("div");
+      tag.className = "bio-tag " + (entry.lastEval ? entry.lastEval.className : "bio-tag-unknown");
+      tag.textContent = entry.lastEval ? entry.lastEval.label : "Sin datos";
+
+      const actions = document.createElement("div");
+      actions.className = "actions-cell";
+
+      const edit = document.createElement("span");
+      edit.className = "icon-btn icon-edit";
+      edit.textContent = "✏️";
+      edit.title = "Editar cantidad";
+      edit.onclick = () => {
+        const current = entry.count || 0;
+        const val = window.prompt(
+          `Nueva cantidad para ${entry.displayName}:`,
+          current > 0 ? String(current) : ""
+        );
+        if (val === null) return;
+        const n = parseInt(val, 10);
+        if (isNaN(n) || n < 0) {
+          alert("Cantidad no válida.");
+          return;
+        }
+        entry.count = n;
+        recomputeBioHealth();
+      };
+
+      const del = document.createElement("span");
+      del.className = "icon-btn icon-delete";
+      del.textContent = "🗑️";
+      del.title = "Eliminar especie";
+      del.onclick = () => {
+        faunaData.splice(index, 1);
+        recomputeBioHealth();
+      };
+
+      actions.appendChild(edit);
+      actions.appendChild(del);
+
+      row.appendChild(main);
+      row.appendChild(tag);
+      row.appendChild(actions);
+      faunaList.appendChild(row);
+    });
+  }
+
+  function renderFloraList() {
+    floraList.innerHTML = "";
+    floraData.forEach((entry, index) => {
+      const row = document.createElement("div");
+      row.className = "bio-item";
+
+      const main = document.createElement("div");
+      main.className = "bio-main";
+
+      const n = document.createElement("div");
+      n.className = "bio-name";
+      n.textContent = entry.displayName;
+
+      const meta = document.createElement("div");
+      meta.className = "bio-meta";
+      if (entry.catalogDef) {
+        const tipo = entry.catalogDef.tipo || "planta";
+        const luz = entry.catalogDef.luz ? ` · luz ${entry.catalogDef.luz}` : "";
+        meta.textContent = `${tipo}${luz}`;
+      } else {
+        meta.textContent = "Planta no registrada en catálogo (MVP)";
+      }
+
+      main.appendChild(n);
+      main.appendChild(meta);
+
+      const tag = document.createElement("div");
+      tag.className = "bio-tag bio-tag-unknown";
+      tag.textContent = "Sin modelo";
+
+      const actions = document.createElement("div");
+      actions.className = "actions-cell";
+
+      const del = document.createElement("span");
+      del.className = "icon-btn icon-delete";
+      del.textContent = "🗑️";
+      del.title = "Eliminar planta";
+      del.onclick = () => {
+        floraData.splice(index, 1);
+        renderFloraList();
+      };
+
+      actions.appendChild(del);
+
+      row.appendChild(main);
+      row.appendChild(tag);
+      row.appendChild(actions);
+      floraList.appendChild(row);
+    });
+  }
+
+  // ============================
+  // MODALES FAUNA / FLORA
+  // ============================
+  const modalFauna = document.getElementById("modalFauna");
+  const modalFlora = document.getElementById("modalFlora");
+
+  document.getElementById("addFaunaBtn").onclick = () => {
+    modalFauna.style.display = "flex";
+  };
+
+  document.getElementById("addFloraBtn").onclick = () => {
+    modalFlora.style.display = "flex";
+  };
+
+  modalFauna.onclick = (e) => {
+    if (e.target === modalFauna) modalFauna.style.display = "none";
+  };
+  modalFlora.onclick = (e) => {
+    if (e.target === modalFlora) modalFlora.style.display = "none";
+  };
+
+  // Guardar fauna
+  document.getElementById("saveFauna").onclick = () => {
+    const rawName = document.getElementById("faunaName").value.trim();
+    const count = parseInt(document.getElementById("faunaCount").value, 10) || null;
+    if (!rawName) return;
+
+    if (!catalogsReady) {
+      alert("El catálogo aún se está cargando. Espera un momento y vuelve a intentarlo.");
+      return;
+    }
+
+    let id = normalizeFaunaName(rawName);
+    let def = id ? faunaCatalog[id] : null;
+
+    if (!def) {
+      const closestAlias = getClosestFaunaAliasKey(rawName);
+      if (closestAlias) {
+        const suggestedId = faunaAliases[closestAlias];
+        const suggestedDef = faunaCatalog[suggestedId];
+
+        const ok = window.confirm(
+          `No se ha encontrado "${rawName}" en el catálogo.\n` +
+          `¿Querías decir "${suggestedDef.comun}" (${suggestedDef.nombre})?`
+        );
+
+        if (!ok) {
+          alert("Entrada cancelada. Corrige el nombre o usa otro alias reconocido.");
+          return;
+        }
+
+        id = suggestedId;
+        def = suggestedDef;
+      } else {
+        alert(
+          'Especie no reconocida en el catálogo.\n' +
+          'Asegúrate de que está incluida en fauna.csv y revisa la escritura.'
+        );
+        return;
+      }
+    }
+
+    const displayName = def.comun || def.nombre;
+
+    faunaData.push({
+      id,
+      rawName,
+      displayName,
+      count,
+      catalogDef: def,
+      lastEval: null
+    });
+
+    document.getElementById("faunaName").value = "";
+    document.getElementById("faunaCount").value = "";
+    modalFauna.style.display = "none";
+
+    recomputeBioHealth();
+  };
+
+  // Guardar flora
+  document.getElementById("saveFlora").onclick = () => {
+    const rawName = document.getElementById("floraName").value.trim();
+    if (!rawName) return;
+
+    let def = null;
+    let displayName = rawName;
+
+    if (catalogsReady) {
+      const key = rawName.trim().toLowerCase();
+      let floraId = floraAliases[key] || null;
+
+      if (!floraId) {
+        Object.entries(floraCatalog).forEach(([id, f]) => {
+          if (
+            f.comun.toLowerCase() === key ||
+            f.nombre.toLowerCase() === key
+          ) {
+            floraId = id;
+          }
+        });
+      }
+
+      if (floraId && floraCatalog[floraId]) {
+        def = floraCatalog[floraId];
+        displayName = def.comun || def.nombre;
+      }
+    }
+
+    floraData.push({
+      rawName,
+      displayName,
+      catalogDef: def
+    });
+
+    document.getElementById("floraName").value = "";
+    modalFlora.style.display = "none";
+    renderFloraList();
+  };
+
+  // ============================
+  // CHAT DEMO
+  // ============================
+  const chatHistory = document.getElementById("chatHistory");
+  const chatInput = document.getElementById("chatInput");
+  const chatSend = document.getElementById("chatSend");
+
+  function addMsg(role, text) {
+    const div = document.createElement("div");
+    div.className = "msg " + role;
+    div.innerHTML = `<div class="msg-bubble">${text}</div>`;
+    chatHistory.appendChild(div);
+    chatHistory.scrollTop = chatHistory.scrollHeight;
+  }
+
+  addMsg(
+    "assistant",
+    "Hola, soy el biólogo digital de ANIPRO. Con tu catálogo y sensores podré ajustar recomendaciones en tiempo real."
+  );
+
+  chatSend.onclick = () => {
+    if (!chatInput.value.trim()) return;
+    addMsg("user", chatInput.value);
+    setTimeout(() => {
+      addMsg(
+        "assistant",
+        "En la versión conectada a la nube correlacionaré fauna, flora, parámetros y carga biológica para recomendar acciones concretas."
+      );
+    }, 400);
+    chatInput.value = "";
+  };
+</script>
+</body>
+</html>

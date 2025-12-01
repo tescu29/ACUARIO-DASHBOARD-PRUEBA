@@ -1,0 +1,85 @@
+id;nombre_cientifico;nombre_comun;tipo;luz;co2;aliases
+micranthemum_tweediei;Micranthemum tweediei;Monte Carlo;tapizante;media-alta;recomendado;monte carlo|micranthemum tweediei
+hemianthus_callitrichoides;Hemianthus callitrichoides;Cuba;tapizante;alta;obligatorio;cuba|hemianthus callitrichoides
+anubias_barteri;Anubias barteri;Anubia;epífita;baja;no necesario;anubia|anubias|anubias barteri
+microsorum_pteropus;Microsorum pteropus;Helecho de Java;epífita;baja-media;opcional;helecho de java|microsorum pteropus
+bucephalandra_sp;Bucephalandra sp.;Bucephalandra;epífita;media;opcional;bucephalandra|buce
+ceratophyllum_demersum;Ceratophyllum demersum;Cola de zorro;tallo rápido;media;no necesario;cola de zorro|ceratophyllum demersum
+hygrophila_polysperma;Hygrophila polysperma;Hygrophila polysperma;tallo rápido;media;opcional;hygrophila polysperma
+rotala_rotundifolia;Rotala rotundifolia;Rotala rotundifolia;tallo;media-alta;recomendado;rotala|rotala rotundifolia
+limnobium_laevigatum;Limnobium laevigatum;Limnobium;flotante;media;no necesario;limnobium
+salvinia_natans;Salvinia natans;Salvinia;flotante;media;no necesario;salvinia
+lemna_minor;Lemna minor;Lenteja de agua;flotante;media;no necesario;lenteja de agua|lemna minor
+vallisneria_sp;Vallisneria sp.;Vallisneria;roseta;media;opcional;vallisneria
+echinodorus_bleheri;Echinodorus bleheri;Echinodorus amazónico;roseta;media;opcional;echinodorus|echinodorus bleheri
+ludwigia_repens;Ludwigia repens;Ludwigia repens;tallo;media-alta;recomendado;ludwigia|ludwigia repens
+micranthemum_tweediei_cv1;Micranthemum tweediei;Monte Carlo cv. 1;tapizante;media-alta;recomendado;monte carlo|micranthemum tweediei|Monte Carlo cv 1|Monte Carlo cultivar 1
+micranthemum_tweediei_cv2;Micranthemum tweediei;Monte Carlo cv. 2;tapizante;media-alta;recomendado;monte carlo|micranthemum tweediei|Monte Carlo cv 2|Monte Carlo cultivar 2
+micranthemum_tweediei_cv3;Micranthemum tweediei;Monte Carlo cv. 3;tapizante;media-alta;recomendado;monte carlo|micranthemum tweediei|Monte Carlo cv 3|Monte Carlo cultivar 3
+micranthemum_tweediei_cv4;Micranthemum tweediei;Monte Carlo cv. 4;tapizante;media-alta;recomendado;monte carlo|micranthemum tweediei|Monte Carlo cv 4|Monte Carlo cultivar 4
+micranthemum_tweediei_cv5;Micranthemum tweediei;Monte Carlo cv. 5;tapizante;media-alta;recomendado;monte carlo|micranthemum tweediei|Monte Carlo cv 5|Monte Carlo cultivar 5
+hemianthus_callitrichoides_cv1;Hemianthus callitrichoides;Cuba cv. 1;tapizante;alta;obligatorio;cuba|hemianthus callitrichoides|Cuba cv 1|Cuba cultivar 1
+hemianthus_callitrichoides_cv2;Hemianthus callitrichoides;Cuba cv. 2;tapizante;alta;obligatorio;cuba|hemianthus callitrichoides|Cuba cv 2|Cuba cultivar 2
+hemianthus_callitrichoides_cv3;Hemianthus callitrichoides;Cuba cv. 3;tapizante;alta;obligatorio;cuba|hemianthus callitrichoides|Cuba cv 3|Cuba cultivar 3
+hemianthus_callitrichoides_cv4;Hemianthus callitrichoides;Cuba cv. 4;tapizante;alta;obligatorio;cuba|hemianthus callitrichoides|Cuba cv 4|Cuba cultivar 4
+hemianthus_callitrichoides_cv5;Hemianthus callitrichoides;Cuba cv. 5;tapizante;alta;obligatorio;cuba|hemianthus callitrichoides|Cuba cv 5|Cuba cultivar 5
+anubias_barteri_cv1;Anubias barteri;Anubia cv. 1;epífita;baja;no necesario;anubia|anubias|anubias barteri|Anubia cv 1|Anubia cultivar 1
+anubias_barteri_cv2;Anubias barteri;Anubia cv. 2;epífita;baja;no necesario;anubia|anubias|anubias barteri|Anubia cv 2|Anubia cultivar 2
+anubias_barteri_cv3;Anubias barteri;Anubia cv. 3;epífita;baja;no necesario;anubia|anubias|anubias barteri|Anubia cv 3|Anubia cultivar 3
+anubias_barteri_cv4;Anubias barteri;Anubia cv. 4;epífita;baja;no necesario;anubia|anubias|anubias barteri|Anubia cv 4|Anubia cultivar 4
+anubias_barteri_cv5;Anubias barteri;Anubia cv. 5;epífita;baja;no necesario;anubia|anubias|anubias barteri|Anubia cv 5|Anubia cultivar 5
+microsorum_pteropus_cv1;Microsorum pteropus;Helecho de Java cv. 1;epífita;baja-media;opcional;helecho de java|microsorum pteropus|Helecho de Java cv 1|Helecho de Java cultivar 1
+microsorum_pteropus_cv2;Microsorum pteropus;Helecho de Java cv. 2;epífita;baja-media;opcional;helecho de java|microsorum pteropus|Helecho de Java cv 2|Helecho de Java cultivar 2
+microsorum_pteropus_cv3;Microsorum pteropus;Helecho de Java cv. 3;epífita;baja-media;opcional;helecho de java|microsorum pteropus|Helecho de Java cv 3|Helecho de Java cultivar 3
+microsorum_pteropus_cv4;Microsorum pteropus;Helecho de Java cv. 4;epífita;baja-media;opcional;helecho de java|microsorum pteropus|Helecho de Java cv 4|Helecho de Java cultivar 4
+microsorum_pteropus_cv5;Microsorum pteropus;Helecho de Java cv. 5;epífita;baja-media;opcional;helecho de java|microsorum pteropus|Helecho de Java cv 5|Helecho de Java cultivar 5
+bucephalandra_sp_cv1;Bucephalandra sp.;Bucephalandra cv. 1;epífita;media;opcional;bucephalandra|buce|Bucephalandra cv 1|Bucephalandra cultivar 1
+bucephalandra_sp_cv2;Bucephalandra sp.;Bucephalandra cv. 2;epífita;media;opcional;bucephalandra|buce|Bucephalandra cv 2|Bucephalandra cultivar 2
+bucephalandra_sp_cv3;Bucephalandra sp.;Bucephalandra cv. 3;epífita;media;opcional;bucephalandra|buce|Bucephalandra cv 3|Bucephalandra cultivar 3
+bucephalandra_sp_cv4;Bucephalandra sp.;Bucephalandra cv. 4;epífita;media;opcional;bucephalandra|buce|Bucephalandra cv 4|Bucephalandra cultivar 4
+bucephalandra_sp_cv5;Bucephalandra sp.;Bucephalandra cv. 5;epífita;media;opcional;bucephalandra|buce|Bucephalandra cv 5|Bucephalandra cultivar 5
+ceratophyllum_demersum_cv1;Ceratophyllum demersum;Cola de zorro cv. 1;tallo rápido;media;no necesario;cola de zorro|ceratophyllum demersum|Cola de zorro cv 1|Cola de zorro cultivar 1
+ceratophyllum_demersum_cv2;Ceratophyllum demersum;Cola de zorro cv. 2;tallo rápido;media;no necesario;cola de zorro|ceratophyllum demersum|Cola de zorro cv 2|Cola de zorro cultivar 2
+ceratophyllum_demersum_cv3;Ceratophyllum demersum;Cola de zorro cv. 3;tallo rápido;media;no necesario;cola de zorro|ceratophyllum demersum|Cola de zorro cv 3|Cola de zorro cultivar 3
+ceratophyllum_demersum_cv4;Ceratophyllum demersum;Cola de zorro cv. 4;tallo rápido;media;no necesario;cola de zorro|ceratophyllum demersum|Cola de zorro cv 4|Cola de zorro cultivar 4
+ceratophyllum_demersum_cv5;Ceratophyllum demersum;Cola de zorro cv. 5;tallo rápido;media;no necesario;cola de zorro|ceratophyllum demersum|Cola de zorro cv 5|Cola de zorro cultivar 5
+hygrophila_polysperma_cv1;Hygrophila polysperma;Hygrophila polysperma cv. 1;tallo rápido;media;opcional;hygrophila polysperma|Hygrophila polysperma cv 1|Hygrophila polysperma cultivar 1
+hygrophila_polysperma_cv2;Hygrophila polysperma;Hygrophila polysperma cv. 2;tallo rápido;media;opcional;hygrophila polysperma|Hygrophila polysperma cv 2|Hygrophila polysperma cultivar 2
+hygrophila_polysperma_cv3;Hygrophila polysperma;Hygrophila polysperma cv. 3;tallo rápido;media;opcional;hygrophila polysperma|Hygrophila polysperma cv 3|Hygrophila polysperma cultivar 3
+hygrophila_polysperma_cv4;Hygrophila polysperma;Hygrophila polysperma cv. 4;tallo rápido;media;opcional;hygrophila polysperma|Hygrophila polysperma cv 4|Hygrophila polysperma cultivar 4
+hygrophila_polysperma_cv5;Hygrophila polysperma;Hygrophila polysperma cv. 5;tallo rápido;media;opcional;hygrophila polysperma|Hygrophila polysperma cv 5|Hygrophila polysperma cultivar 5
+rotala_rotundifolia_cv1;Rotala rotundifolia;Rotala rotundifolia cv. 1;tallo;media-alta;recomendado;rotala|rotala rotundifolia|Rotala rotundifolia cv 1|Rotala rotundifolia cultivar 1
+rotala_rotundifolia_cv2;Rotala rotundifolia;Rotala rotundifolia cv. 2;tallo;media-alta;recomendado;rotala|rotala rotundifolia|Rotala rotundifolia cv 2|Rotala rotundifolia cultivar 2
+rotala_rotundifolia_cv3;Rotala rotundifolia;Rotala rotundifolia cv. 3;tallo;media-alta;recomendado;rotala|rotala rotundifolia|Rotala rotundifolia cv 3|Rotala rotundifolia cultivar 3
+rotala_rotundifolia_cv4;Rotala rotundifolia;Rotala rotundifolia cv. 4;tallo;media-alta;recomendado;rotala|rotala rotundifolia|Rotala rotundifolia cv 4|Rotala rotundifolia cultivar 4
+rotala_rotundifolia_cv5;Rotala rotundifolia;Rotala rotundifolia cv. 5;tallo;media-alta;recomendado;rotala|rotala rotundifolia|Rotala rotundifolia cv 5|Rotala rotundifolia cultivar 5
+limnobium_laevigatum_cv1;Limnobium laevigatum;Limnobium cv. 1;flotante;media;no necesario;limnobium|Limnobium cv 1|Limnobium cultivar 1
+limnobium_laevigatum_cv2;Limnobium laevigatum;Limnobium cv. 2;flotante;media;no necesario;limnobium|Limnobium cv 2|Limnobium cultivar 2
+limnobium_laevigatum_cv3;Limnobium laevigatum;Limnobium cv. 3;flotante;media;no necesario;limnobium|Limnobium cv 3|Limnobium cultivar 3
+limnobium_laevigatum_cv4;Limnobium laevigatum;Limnobium cv. 4;flotante;media;no necesario;limnobium|Limnobium cv 4|Limnobium cultivar 4
+limnobium_laevigatum_cv5;Limnobium laevigatum;Limnobium cv. 5;flotante;media;no necesario;limnobium|Limnobium cv 5|Limnobium cultivar 5
+salvinia_natans_cv1;Salvinia natans;Salvinia cv. 1;flotante;media;no necesario;salvinia|Salvinia cv 1|Salvinia cultivar 1
+salvinia_natans_cv2;Salvinia natans;Salvinia cv. 2;flotante;media;no necesario;salvinia|Salvinia cv 2|Salvinia cultivar 2
+salvinia_natans_cv3;Salvinia natans;Salvinia cv. 3;flotante;media;no necesario;salvinia|Salvinia cv 3|Salvinia cultivar 3
+salvinia_natans_cv4;Salvinia natans;Salvinia cv. 4;flotante;media;no necesario;salvinia|Salvinia cv 4|Salvinia cultivar 4
+salvinia_natans_cv5;Salvinia natans;Salvinia cv. 5;flotante;media;no necesario;salvinia|Salvinia cv 5|Salvinia cultivar 5
+lemna_minor_cv1;Lemna minor;Lenteja de agua cv. 1;flotante;media;no necesario;lenteja de agua|lemna minor|Lenteja de agua cv 1|Lenteja de agua cultivar 1
+lemna_minor_cv2;Lemna minor;Lenteja de agua cv. 2;flotante;media;no necesario;lenteja de agua|lemna minor|Lenteja de agua cv 2|Lenteja de agua cultivar 2
+lemna_minor_cv3;Lemna minor;Lenteja de agua cv. 3;flotante;media;no necesario;lenteja de agua|lemna minor|Lenteja de agua cv 3|Lenteja de agua cultivar 3
+lemna_minor_cv4;Lemna minor;Lenteja de agua cv. 4;flotante;media;no necesario;lenteja de agua|lemna minor|Lenteja de agua cv 4|Lenteja de agua cultivar 4
+lemna_minor_cv5;Lemna minor;Lenteja de agua cv. 5;flotante;media;no necesario;lenteja de agua|lemna minor|Lenteja de agua cv 5|Lenteja de agua cultivar 5
+vallisneria_sp_cv1;Vallisneria sp.;Vallisneria cv. 1;roseta;media;opcional;vallisneria|Vallisneria cv 1|Vallisneria cultivar 1
+vallisneria_sp_cv2;Vallisneria sp.;Vallisneria cv. 2;roseta;media;opcional;vallisneria|Vallisneria cv 2|Vallisneria cultivar 2
+vallisneria_sp_cv3;Vallisneria sp.;Vallisneria cv. 3;roseta;media;opcional;vallisneria|Vallisneria cv 3|Vallisneria cultivar 3
+vallisneria_sp_cv4;Vallisneria sp.;Vallisneria cv. 4;roseta;media;opcional;vallisneria|Vallisneria cv 4|Vallisneria cultivar 4
+vallisneria_sp_cv5;Vallisneria sp.;Vallisneria cv. 5;roseta;media;opcional;vallisneria|Vallisneria cv 5|Vallisneria cultivar 5
+echinodorus_bleheri_cv1;Echinodorus bleheri;Echinodorus amazónico cv. 1;roseta;media;opcional;echinodorus|echinodorus bleheri|Echinodorus amazónico cv 1|Echinodorus amazónico cultivar 1
+echinodorus_bleheri_cv2;Echinodorus bleheri;Echinodorus amazónico cv. 2;roseta;media;opcional;echinodorus|echinodorus bleheri|Echinodorus amazónico cv 2|Echinodorus amazónico cultivar 2
+echinodorus_bleheri_cv3;Echinodorus bleheri;Echinodorus amazónico cv. 3;roseta;media;opcional;echinodorus|echinodorus bleheri|Echinodorus amazónico cv 3|Echinodorus amazónico cultivar 3
+echinodorus_bleheri_cv4;Echinodorus bleheri;Echinodorus amazónico cv. 4;roseta;media;opcional;echinodorus|echinodorus bleheri|Echinodorus amazónico cv 4|Echinodorus amazónico cultivar 4
+echinodorus_bleheri_cv5;Echinodorus bleheri;Echinodorus amazónico cv. 5;roseta;media;opcional;echinodorus|echinodorus bleheri|Echinodorus amazónico cv 5|Echinodorus amazónico cultivar 5
+ludwigia_repens_cv1;Ludwigia repens;Ludwigia repens cv. 1;tallo;media-alta;recomendado;ludwigia|ludwigia repens|Ludwigia repens cv 1|Ludwigia repens cultivar 1
+ludwigia_repens_cv2;Ludwigia repens;Ludwigia repens cv. 2;tallo;media-alta;recomendado;ludwigia|ludwigia repens|Ludwigia repens cv 2|Ludwigia repens cultivar 2
+ludwigia_repens_cv3;Ludwigia repens;Ludwigia repens cv. 3;tallo;media-alta;recomendado;ludwigia|ludwigia repens|Ludwigia repens cv 3|Ludwigia repens cultivar 3
+ludwigia_repens_cv4;Ludwigia repens;Ludwigia repens cv. 4;tallo;media-alta;recomendado;ludwigia|ludwigia repens|Ludwigia repens cv 4|Ludwigia repens cultivar 4
+ludwigia_repens_cv5;Ludwigia repens;Ludwigia repens cv. 5;tallo;media-alta;recomendado;ludwigia|ludwigia repens|Ludwigia repens cv 5|Ludwigia repens cultivar 5

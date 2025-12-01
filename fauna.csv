@@ -1,0 +1,123 @@
+id;nombre_cientifico;nombre_comun;grupo;temp_min;temp_max;ph_min;ph_max;tds_min;tds_max;sensibilidad;bioload;aliases
+rasbora_brigittae;Rasbora brigittae;rasbora mosquito;pez pequeño de cardumen;24;28;4.0;7.0;40;220;media-alta;0.3;rasbora|rasbora mosquito|rasbora brigittae
+rasbora_heteromorpha;Trigonostigma heteromorpha;rasbora arlequín;pez de cardumen;22;27;6.0;7.5;50;300;media;0.4;rasbora arlequin|rasbora arlequín|trigonostigma heteromorpha
+rasbora_espei;Trigonostigma espei;rasbora espei;pez de cardumen;23;28;5.5;7.0;50;250;media;0.4;rasbora espei|trigonostigma espei
+rasbora_hengeli;Trigonostigma hengeli;rasbora hengeli;pez de cardumen;23;28;5.5;7.2;40;220;media;0.35;rasbora hengeli|trigonostigma hengeli
+danio_rerio;Danio rerio;pez cebra;pez pequeño activo;18;26;6.0;8.0;100;400;baja;0.4;danio|danio rerio|pez cebra
+danio_margaritatus;Danio margaritatus;rasbora galaxy;microrasbora;21;26;6.5;7.5;80;250;media-alta;0.25;galaxy|rasbora galaxy|danio margaritatus
+tetra_neon;Paracheirodon innesi;neón;tetra pequeño;21;25;5.0;7.0;30;150;alta;0.3;neon|neón|paracheirodon innesi
+tetra_cardenal;Paracheirodon axelrodi;cardenal;tetra delicado;24;30;4.5;6.8;30;120;muy alta;0.3;cardenal|paracheirodon axelrodi
+tetra_ember;Hyphessobrycon amandae;tetra ember;tetra pequeño;23;28;5.5;7.5;40;200;media;0.25;tetra ember|ember|hyphessobrycon amandae
+tetra_limon;Hyphessobrycon pulchripinnis;tetra limón;tetra medio;23;28;6.0;7.5;50;250;media;0.5;tetra limon|tetra limón|hyphessobrycon pulchripinnis
+tetra_pinguino;Thayeria boehlkei;tetra pingüino;tetra medio;23;28;6.0;7.5;50;250;media;0.6;tetra pinguino|tetra pingüino|thayeria boehlkei
+barbus_cherry;Puntius titteya;barbo cereza;barbo pequeño;22;27;6.0;7.5;80;300;media;0.6;barbo cereza|puntius titteya
+barbus_tigre;Puntigrus tetrazona;barbo tigre;barbo activo;22;27;6.0;7.5;80;300;media;0.8;barbo tigre|puntigrus tetrazona
+corydoras_pygmaeus;Corydoras pygmaeus;corydora pigmea;corydora enana;22;26;6.0;7.5;50;250;alta;0.4;corydora pigmea|corydoras pygmaeus|corydora
+corydoras_habrosus;Corydoras habrosus;corydora habrosus;corydora enana;22;26;6.2;7.5;50;250;media;0.4;corydora habrosus|corydoras habrosus
+corydoras_paleatus;Corydoras paleatus;corydora pimienta;corydora mediana;20;26;6.0;8.0;50;350;media-baja;0.6;corydora paleatus|corydoras paleatus|corydora pimienta
+corydoras_sterbai;Corydoras sterbai;corydora sterbai;corydora mediana;24;28;6.0;7.8;50;300;media;0.7;corydora sterbai|corydoras sterbai
+corydoras_aeneus;Corydoras aeneus;corydora bronce;corydora mediana;22;28;6.0;8.0;50;350;media-baja;0.7;corydora aeneus|corydoras aeneus|corydora bronce
+guppy;Poecilia reticulata;guppy;vivíparo;22;28;6.8;8.0;150;450;media-baja;1.0;guppy|poecilia reticulata
+endler;Poecilia wingei;endler;vivíparo;22;28;6.5;8.0;120;420;media-baja;0.8;endler|poecilia wingei
+molly;Poecilia sphenops;molly;vivíparo;24;28;7.0;8.5;200;500;media;2.0;molly|poecilia sphenops
+platy;Xiphophorus maculatus;platy;vivíparo;22;28;7.0;8.2;200;500;media-baja;1.5;platy|xiphophorus maculatus
+xipho;Xiphophorus hellerii;pez espada;vivíparo;22;28;7.0;8.2;200;500;media;2.0;espada|xipho|xiphophorus hellerii
+betta_splendens;Betta splendens;betta;laberíntido;25;30;6.0;7.5;50;250;media;1.5;betta|betta splendens
+colisa_lalia;Trichogaster lalius;gourami enano;laberíntido;24;28;6.0;7.5;50;250;media-alta;1.8;gourami enano|colisa lalia|trichogaster lalius
+colisa_chuna;Trichogaster chuna;gourami miel;laberíntido;24;28;6.0;7.5;50;250;media;1.5;gourami miel|colisa chuna|trichogaster chuna
+ramirezi;Mikrogeophagus ramirezi;ramirezi;cíclido enano;25;31;5.0;6.8;30;120;muy alta;1.8;ramirezi|mikrogeophagus ramirezi
+apistogramma_agassizii;Apistogramma agassizii;apistogramma agassizii;cíclido enano;26;30;4.5;6.5;20;120;alta;1.8;apistogramma agassizii|agassizii
+apistogramma_cacatuoides;Apistogramma cacatuoides;apistogramma cacatuoides;cíclido enano;24;28;6.0;7.5;50;200;media;1.8;apistogramma cacatuoides|cacatuoides
+otocinclus;Otocinclus affinis;otocinclus;limpiador de algas;22;28;6.0;7.5;40;200;alta;0.4;otocinclus|oto
+ancistrus;Ancistrus sp.;ancistrus;pleco pequeño;22;28;6.0;7.8;80;350;media;3.0;ancistrus
+pleco_comun;Hypostomus plecostomus;pleco común;pleco grande;22;28;6.5;8.0;80;400;media;6.0;pleco|plecostomus
+pangio_kuhli;Pangio kuhlii;locha kuhli;locha;24;28;5.5;7.0;40;200;media;0.6;pangio kuhlii|locha kuhli
+neocaridina_davidi;Neocaridina davidi;gamba neocaridina;gamba enana;18;26;6.2;7.8;80;250;media;0.05;neocaridina|neocaridina davidi|gamba neocaridina|gamba cherry|cherry
+caridina_cantonensis;Caridina cantonensis;crystal;gamba Caridina;20;24;5.5;6.8;90;140;muy alta;0.05;caridina cantonensis|crystal|crystal red|crystal black|crs
+caridina_multidentata;Caridina multidentata;gamba amano;gamba grande;18;28;6.5;7.8;80;250;media;0.15;gamba amano|amano|caridina multidentata
+caridina_dennerli;Caridina dennerli;gamba Sulawesi;gamba delicada;28;30;7.8;8.4;150;250;muy alta;0.05;caridina dennerli|sulawesi
+neritina_natalensis;Neritina natalensis;caracol cebra (neritina);caracol limpiador;22;28;7.0;8.5;150;450;media;0.2;neritina|caracol cebra|neritina natalensis
+planorbella_duryi;Planorbella duryi;planorbis;caracol planorbis;18;28;6.5;8.2;80;400;baja;0.1;planorbis|planorbella duryi
+physa_marmorata;Physa marmorata;physa;caracol physa;18;28;6.0;8.0;80;400;baja;0.1;physa|physa marmorata
+melanoides_tuberculata;Melanoides tuberculata;melanoides;caracol de cono;20;30;6.5;8.3;100;450;baja;0.15;melanoides|melanoides tuberculata
+pomacea_diffusa;Pomacea diffusa;caracol manzana;caracol grande;20;28;7.0;8.2;150;450;media;0.8;caracol manzana|pomacea diffusa
+guppy_lin1;Poecilia reticulata;guppy línea 1;vivíparo;22;28;6.8;8.0;150;450;media-baja;1.0;guppy|poecilia reticulata|guppy linea 1|guppy línea 1
+guppy_lin2;Poecilia reticulata;guppy línea 2;vivíparo;22;28;6.8;8.0;150;450;media-baja;1.0;guppy|poecilia reticulata|guppy linea 2|guppy línea 2
+guppy_lin3;Poecilia reticulata;guppy línea 3;vivíparo;22;28;6.8;8.0;150;450;media-baja;1.0;guppy|poecilia reticulata|guppy linea 3|guppy línea 3
+guppy_lin4;Poecilia reticulata;guppy línea 4;vivíparo;22;28;6.8;8.0;150;450;media-baja;1.0;guppy|poecilia reticulata|guppy linea 4|guppy línea 4
+endler_lin1;Poecilia wingei;endler línea 1;vivíparo;22;28;6.5;8.0;120;420;media-baja;0.8;endler|poecilia wingei|endler linea 1|endler línea 1
+endler_lin2;Poecilia wingei;endler línea 2;vivíparo;22;28;6.5;8.0;120;420;media-baja;0.8;endler|poecilia wingei|endler linea 2|endler línea 2
+endler_lin3;Poecilia wingei;endler línea 3;vivíparo;22;28;6.5;8.0;120;420;media-baja;0.8;endler|poecilia wingei|endler linea 3|endler línea 3
+endler_lin4;Poecilia wingei;endler línea 4;vivíparo;22;28;6.5;8.0;120;420;media-baja;0.8;endler|poecilia wingei|endler linea 4|endler línea 4
+molly_lin1;Poecilia sphenops;molly línea 1;vivíparo;24;28;7.0;8.5;200;500;media;2.0;molly|poecilia sphenops|molly linea 1|molly línea 1
+molly_lin2;Poecilia sphenops;molly línea 2;vivíparo;24;28;7.0;8.5;200;500;media;2.0;molly|poecilia sphenops|molly linea 2|molly línea 2
+molly_lin3;Poecilia sphenops;molly línea 3;vivíparo;24;28;7.0;8.5;200;500;media;2.0;molly|poecilia sphenops|molly linea 3|molly línea 3
+molly_lin4;Poecilia sphenops;molly línea 4;vivíparo;24;28;7.0;8.5;200;500;media;2.0;molly|poecilia sphenops|molly linea 4|molly línea 4
+platy_lin1;Xiphophorus maculatus;platy línea 1;vivíparo;22;28;7.0;8.2;200;500;media-baja;1.5;platy|xiphophorus maculatus|platy linea 1|platy línea 1
+platy_lin2;Xiphophorus maculatus;platy línea 2;vivíparo;22;28;7.0;8.2;200;500;media-baja;1.5;platy|xiphophorus maculatus|platy linea 2|platy línea 2
+platy_lin3;Xiphophorus maculatus;platy línea 3;vivíparo;22;28;7.0;8.2;200;500;media-baja;1.5;platy|xiphophorus maculatus|platy linea 3|platy línea 3
+platy_lin4;Xiphophorus maculatus;platy línea 4;vivíparo;22;28;7.0;8.2;200;500;media-baja;1.5;platy|xiphophorus maculatus|platy linea 4|platy línea 4
+xipho_lin1;Xiphophorus hellerii;pez espada línea 1;vivíparo;22;28;7.0;8.2;200;500;media;2.0;espada|xipho|xiphophorus hellerii|pez espada linea 1|pez espada línea 1
+xipho_lin2;Xiphophorus hellerii;pez espada línea 2;vivíparo;22;28;7.0;8.2;200;500;media;2.0;espada|xipho|xiphophorus hellerii|pez espada linea 2|pez espada línea 2
+xipho_lin3;Xiphophorus hellerii;pez espada línea 3;vivíparo;22;28;7.0;8.2;200;500;media;2.0;espada|xipho|xiphophorus hellerii|pez espada linea 3|pez espada línea 3
+xipho_lin4;Xiphophorus hellerii;pez espada línea 4;vivíparo;22;28;7.0;8.2;200;500;media;2.0;espada|xipho|xiphophorus hellerii|pez espada linea 4|pez espada línea 4
+neocaridina_davidi_lin1;Neocaridina davidi;gamba neocaridina línea 1;gamba enana;18;26;6.2;7.8;80;250;media;0.05;neocaridina|neocaridina davidi|gamba neocaridina|gamba cherry|cherry|gamba neocaridina linea 1|gamba neocaridina línea 1
+neocaridina_davidi_lin2;Neocaridina davidi;gamba neocaridina línea 2;gamba enana;18;26;6.2;7.8;80;250;media;0.05;neocaridina|neocaridina davidi|gamba neocaridina|gamba cherry|cherry|gamba neocaridina linea 2|gamba neocaridina línea 2
+neocaridina_davidi_lin3;Neocaridina davidi;gamba neocaridina línea 3;gamba enana;18;26;6.2;7.8;80;250;media;0.05;neocaridina|neocaridina davidi|gamba neocaridina|gamba cherry|cherry|gamba neocaridina linea 3|gamba neocaridina línea 3
+neocaridina_davidi_lin4;Neocaridina davidi;gamba neocaridina línea 4;gamba enana;18;26;6.2;7.8;80;250;media;0.05;neocaridina|neocaridina davidi|gamba neocaridina|gamba cherry|cherry|gamba neocaridina linea 4|gamba neocaridina línea 4
+caridina_cantonensis_lin1;Caridina cantonensis;crystal línea 1;gamba Caridina;20;24;5.5;6.8;90;140;muy alta;0.05;caridina cantonensis|crystal|crystal red|crystal black|crs|crystal linea 1|crystal línea 1
+caridina_cantonensis_lin2;Caridina cantonensis;crystal línea 2;gamba Caridina;20;24;5.5;6.8;90;140;muy alta;0.05;caridina cantonensis|crystal|crystal red|crystal black|crs|crystal linea 2|crystal línea 2
+caridina_cantonensis_lin3;Caridina cantonensis;crystal línea 3;gamba Caridina;20;24;5.5;6.8;90;140;muy alta;0.05;caridina cantonensis|crystal|crystal red|crystal black|crs|crystal linea 3|crystal línea 3
+caridina_cantonensis_lin4;Caridina cantonensis;crystal línea 4;gamba Caridina;20;24;5.5;6.8;90;140;muy alta;0.05;caridina cantonensis|crystal|crystal red|crystal black|crs|crystal linea 4|crystal línea 4
+caridina_multidentata_lin1;Caridina multidentata;gamba amano línea 1;gamba grande;18;28;6.5;7.8;80;250;media;0.15;gamba amano|amano|caridina multidentata|gamba amano linea 1|gamba amano línea 1
+caridina_multidentata_lin2;Caridina multidentata;gamba amano línea 2;gamba grande;18;28;6.5;7.8;80;250;media;0.15;gamba amano|amano|caridina multidentata|gamba amano linea 2|gamba amano línea 2
+caridina_multidentata_lin3;Caridina multidentata;gamba amano línea 3;gamba grande;18;28;6.5;7.8;80;250;media;0.15;gamba amano|amano|caridina multidentata|gamba amano linea 3|gamba amano línea 3
+caridina_multidentata_lin4;Caridina multidentata;gamba amano línea 4;gamba grande;18;28;6.5;7.8;80;250;media;0.15;gamba amano|amano|caridina multidentata|gamba amano linea 4|gamba amano línea 4
+caridina_dennerli_lin1;Caridina dennerli;gamba Sulawesi línea 1;gamba delicada;28;30;7.8;8.4;150;250;muy alta;0.05;caridina dennerli|sulawesi|gamba Sulawesi linea 1|gamba Sulawesi línea 1
+caridina_dennerli_lin2;Caridina dennerli;gamba Sulawesi línea 2;gamba delicada;28;30;7.8;8.4;150;250;muy alta;0.05;caridina dennerli|sulawesi|gamba Sulawesi linea 2|gamba Sulawesi línea 2
+caridina_dennerli_lin3;Caridina dennerli;gamba Sulawesi línea 3;gamba delicada;28;30;7.8;8.4;150;250;muy alta;0.05;caridina dennerli|sulawesi|gamba Sulawesi linea 3|gamba Sulawesi línea 3
+caridina_dennerli_lin4;Caridina dennerli;gamba Sulawesi línea 4;gamba delicada;28;30;7.8;8.4;150;250;muy alta;0.05;caridina dennerli|sulawesi|gamba Sulawesi linea 4|gamba Sulawesi línea 4
+rasbora_brigittae_lin1;Rasbora brigittae;rasbora mosquito línea 1;pez pequeño de cardumen;24;28;4.0;7.0;40;220;media-alta;0.3;rasbora|rasbora mosquito|rasbora brigittae|rasbora mosquito linea 1|rasbora mosquito línea 1
+rasbora_brigittae_lin2;Rasbora brigittae;rasbora mosquito línea 2;pez pequeño de cardumen;24;28;4.0;7.0;40;220;media-alta;0.3;rasbora|rasbora mosquito|rasbora brigittae|rasbora mosquito linea 2|rasbora mosquito línea 2
+rasbora_brigittae_lin3;Rasbora brigittae;rasbora mosquito línea 3;pez pequeño de cardumen;24;28;4.0;7.0;40;220;media-alta;0.3;rasbora|rasbora mosquito|rasbora brigittae|rasbora mosquito linea 3|rasbora mosquito línea 3
+rasbora_brigittae_lin4;Rasbora brigittae;rasbora mosquito línea 4;pez pequeño de cardumen;24;28;4.0;7.0;40;220;media-alta;0.3;rasbora|rasbora mosquito|rasbora brigittae|rasbora mosquito linea 4|rasbora mosquito línea 4
+tetra_neon_lin1;Paracheirodon innesi;neón línea 1;tetra pequeño;21;25;5.0;7.0;30;150;alta;0.3;neon|neón|paracheirodon innesi|neón linea 1|neón línea 1
+tetra_neon_lin2;Paracheirodon innesi;neón línea 2;tetra pequeño;21;25;5.0;7.0;30;150;alta;0.3;neon|neón|paracheirodon innesi|neón linea 2|neón línea 2
+tetra_neon_lin3;Paracheirodon innesi;neón línea 3;tetra pequeño;21;25;5.0;7.0;30;150;alta;0.3;neon|neón|paracheirodon innesi|neón linea 3|neón línea 3
+tetra_neon_lin4;Paracheirodon innesi;neón línea 4;tetra pequeño;21;25;5.0;7.0;30;150;alta;0.3;neon|neón|paracheirodon innesi|neón linea 4|neón línea 4
+tetra_cardenal_lin1;Paracheirodon axelrodi;cardenal línea 1;tetra delicado;24;30;4.5;6.8;30;120;muy alta;0.3;cardenal|paracheirodon axelrodi|cardenal linea 1|cardenal línea 1
+tetra_cardenal_lin2;Paracheirodon axelrodi;cardenal línea 2;tetra delicado;24;30;4.5;6.8;30;120;muy alta;0.3;cardenal|paracheirodon axelrodi|cardenal linea 2|cardenal línea 2
+tetra_cardenal_lin3;Paracheirodon axelrodi;cardenal línea 3;tetra delicado;24;30;4.5;6.8;30;120;muy alta;0.3;cardenal|paracheirodon axelrodi|cardenal linea 3|cardenal línea 3
+tetra_cardenal_lin4;Paracheirodon axelrodi;cardenal línea 4;tetra delicado;24;30;4.5;6.8;30;120;muy alta;0.3;cardenal|paracheirodon axelrodi|cardenal linea 4|cardenal línea 4
+tetra_ember_lin1;Hyphessobrycon amandae;tetra ember línea 1;tetra pequeño;23;28;5.5;7.5;40;200;media;0.25;tetra ember|ember|hyphessobrycon amandae|tetra ember linea 1|tetra ember línea 1
+tetra_ember_lin2;Hyphessobrycon amandae;tetra ember línea 2;tetra pequeño;23;28;5.5;7.5;40;200;media;0.25;tetra ember|ember|hyphessobrycon amandae|tetra ember linea 2|tetra ember línea 2
+tetra_ember_lin3;Hyphessobrycon amandae;tetra ember línea 3;tetra pequeño;23;28;5.5;7.5;40;200;media;0.25;tetra ember|ember|hyphessobrycon amandae|tetra ember linea 3|tetra ember línea 3
+tetra_ember_lin4;Hyphessobrycon amandae;tetra ember línea 4;tetra pequeño;23;28;5.5;7.5;40;200;media;0.25;tetra ember|ember|hyphessobrycon amandae|tetra ember linea 4|tetra ember línea 4
+corydoras_pygmaeus_lin1;Corydoras pygmaeus;corydora pigmea línea 1;corydora enana;22;26;6.0;7.5;50;250;alta;0.4;corydora pigmea|corydoras pygmaeus|corydora|corydora pigmea linea 1|corydora pigmea línea 1
+corydoras_pygmaeus_lin2;Corydoras pygmaeus;corydora pigmea línea 2;corydora enana;22;26;6.0;7.5;50;250;alta;0.4;corydora pigmea|corydoras pygmaeus|corydora|corydora pigmea linea 2|corydora pigmea línea 2
+corydoras_pygmaeus_lin3;Corydoras pygmaeus;corydora pigmea línea 3;corydora enana;22;26;6.0;7.5;50;250;alta;0.4;corydora pigmea|corydoras pygmaeus|corydora|corydora pigmea linea 3|corydora pigmea línea 3
+corydoras_pygmaeus_lin4;Corydoras pygmaeus;corydora pigmea línea 4;corydora enana;22;26;6.0;7.5;50;250;alta;0.4;corydora pigmea|corydoras pygmaeus|corydora|corydora pigmea linea 4|corydora pigmea línea 4
+corydoras_habrosus_lin1;Corydoras habrosus;corydora habrosus línea 1;corydora enana;22;26;6.2;7.5;50;250;media;0.4;corydora habrosus|corydoras habrosus|corydora habrosus linea 1|corydora habrosus línea 1
+corydoras_habrosus_lin2;Corydoras habrosus;corydora habrosus línea 2;corydora enana;22;26;6.2;7.5;50;250;media;0.4;corydora habrosus|corydoras habrosus|corydora habrosus linea 2|corydora habrosus línea 2
+corydoras_habrosus_lin3;Corydoras habrosus;corydora habrosus línea 3;corydora enana;22;26;6.2;7.5;50;250;media;0.4;corydora habrosus|corydoras habrosus|corydora habrosus linea 3|corydora habrosus línea 3
+corydoras_habrosus_lin4;Corydoras habrosus;corydora habrosus línea 4;corydora enana;22;26;6.2;7.5;50;250;media;0.4;corydora habrosus|corydoras habrosus|corydora habrosus linea 4|corydora habrosus línea 4
+corydoras_paleatus_lin1;Corydoras paleatus;corydora pimienta línea 1;corydora mediana;20;26;6.0;8.0;50;350;media-baja;0.6;corydora paleatus|corydoras paleatus|corydora pimienta|corydora pimienta linea 1|corydora pimienta línea 1
+corydoras_paleatus_lin2;Corydoras paleatus;corydora pimienta línea 2;corydora mediana;20;26;6.0;8.0;50;350;media-baja;0.6;corydora paleatus|corydoras paleatus|corydora pimienta|corydora pimienta linea 2|corydora pimienta línea 2
+corydoras_paleatus_lin3;Corydoras paleatus;corydora pimienta línea 3;corydora mediana;20;26;6.0;8.0;50;350;media-baja;0.6;corydora paleatus|corydoras paleatus|corydora pimienta|corydora pimienta linea 3|corydora pimienta línea 3
+corydoras_paleatus_lin4;Corydoras paleatus;corydora pimienta línea 4;corydora mediana;20;26;6.0;8.0;50;350;media-baja;0.6;corydora paleatus|corydoras paleatus|corydora pimienta|corydora pimienta linea 4|corydora pimienta línea 4
+corydoras_sterbai_lin1;Corydoras sterbai;corydora sterbai línea 1;corydora mediana;24;28;6.0;7.8;50;300;media;0.7;corydora sterbai|corydoras sterbai|corydora sterbai linea 1|corydora sterbai línea 1
+corydoras_sterbai_lin2;Corydoras sterbai;corydora sterbai línea 2;corydora mediana;24;28;6.0;7.8;50;300;media;0.7;corydora sterbai|corydoras sterbai|corydora sterbai linea 2|corydora sterbai línea 2
+corydoras_sterbai_lin3;Corydoras sterbai;corydora sterbai línea 3;corydora mediana;24;28;6.0;7.8;50;300;media;0.7;corydora sterbai|corydoras sterbai|corydora sterbai linea 3|corydora sterbai línea 3
+corydoras_sterbai_lin4;Corydoras sterbai;corydora sterbai línea 4;corydora mediana;24;28;6.0;7.8;50;300;media;0.7;corydora sterbai|corydoras sterbai|corydora sterbai linea 4|corydora sterbai línea 4
+ancistrus_lin1;Ancistrus sp.;ancistrus línea 1;pleco pequeño;22;28;6.0;7.8;80;350;media;3.0;ancistrus|ancistrus linea 1|ancistrus línea 1
+ancistrus_lin2;Ancistrus sp.;ancistrus línea 2;pleco pequeño;22;28;6.0;7.8;80;350;media;3.0;ancistrus|ancistrus linea 2|ancistrus línea 2
+ancistrus_lin3;Ancistrus sp.;ancistrus línea 3;pleco pequeño;22;28;6.0;7.8;80;350;media;3.0;ancistrus|ancistrus linea 3|ancistrus línea 3
+ancistrus_lin4;Ancistrus sp.;ancistrus línea 4;pleco pequeño;22;28;6.0;7.8;80;350;media;3.0;ancistrus|ancistrus linea 4|ancistrus línea 4
+otocinclus_lin1;Otocinclus affinis;otocinclus línea 1;limpiador de algas;22;28;6.0;7.5;40;200;alta;0.4;otocinclus|oto|otocinclus linea 1|otocinclus línea 1
+otocinclus_lin2;Otocinclus affinis;otocinclus línea 2;limpiador de algas;22;28;6.0;7.5;40;200;alta;0.4;otocinclus|oto|otocinclus linea 2|otocinclus línea 2
+otocinclus_lin3;Otocinclus affinis;otocinclus línea 3;limpiador de algas;22;28;6.0;7.5;40;200;alta;0.4;otocinclus|oto|otocinclus linea 3|otocinclus línea 3
+otocinclus_lin4;Otocinclus affinis;otocinclus línea 4;limpiador de algas;22;28;6.0;7.5;40;200;alta;0.4;otocinclus|oto|otocinclus linea 4|otocinclus línea 4
+betta_splendens_lin1;Betta splendens;betta línea 1;laberíntido;25;30;6.0;7.5;50;250;media;1.5;betta|betta splendens|betta linea 1|betta línea 1
+betta_splendens_lin2;Betta splendens;betta línea 2;laberíntido;25;30;6.0;7.5;50;250;media;1.5;betta|betta splendens|betta linea 2|betta línea 2
+betta_splendens_lin3;Betta splendens;betta línea 3;laberíntido;25;30;6.0;7.5;50;250;media;1.5;betta|betta splendens|betta linea 3|betta línea 3
+betta_splendens_lin4;Betta splendens;betta línea 4;laberíntido;25;30;6.0;7.5;50;250;media;1.5;betta|betta splendens|betta linea 4|betta línea 4
