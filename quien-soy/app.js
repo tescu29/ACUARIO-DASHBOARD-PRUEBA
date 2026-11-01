@@ -14,7 +14,6 @@ const MIX_GROUPS=[
  {categories:['musica','deporte','influencers'],share:35},
  {categories:['historia','ciencia','arte','politica','exploradores','mitologia'],share:20}
 ];
-const MIX_LEVEL_WEIGHT={facil:1.15,media:1,dificil:0.7};
 function availableCharacters(categories,difficulty){
  return CHARACTERS.filter(c=>categories.includes(c.category)&&(difficulty==='mixta'||c.level===difficulty));
 }
@@ -31,10 +30,13 @@ function buildCandidatePool(categories,difficulty){
   const budget=960*group.share/totalShares/group.categories.length;
   for(const category of group.categories){
    const cards=selected.filter(ch=>ch.category===category);
-   const total=cards.reduce((sum,ch)=>sum+(MIX_LEVEL_WEIGHT[ch.level]||1),0);
-   for(const ch of cards){
-    const repeats=Math.max(1,Math.round(budget*(MIX_LEVEL_WEIGHT[ch.level]||1)/total));
-    for(let j=0;j<repeats;j++)weighted.push(ch.id);
+   const levels=['facil','media','dificil'].map(level=>({
+    level,items:cards.filter(ch=>ch.level===level),share:{facil:60,media:30,dificil:10}[level]
+   })).filter(group=>group.items.length);
+   const levelsSum=levels.reduce((sum,group)=>sum+group.share,0);
+   for(const level of levels){
+    const repeats=Math.max(1,Math.round(budget*(level.share/levelsSum)/level.items.length));
+    for(const ch of level.items)for(let j=0;j<repeats;j++)weighted.push(ch.id);
    }
   }
  }
